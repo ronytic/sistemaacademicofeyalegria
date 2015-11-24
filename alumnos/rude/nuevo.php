@@ -12,7 +12,7 @@ $curso=new curso;
 $cur=todolista($curso->mostrarTodo(),"codcurso","nombre","");
 
 $foto="../foto/".$al['foto'];
-if(!file_exists($foto) or $foto!=""){
+if(!file_exists($foto) && $foto!=""){
 	$foto="../foto/0.jpg";
 }
 include_once '../../funciones/funciones.php';

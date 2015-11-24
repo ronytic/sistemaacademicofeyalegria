@@ -1,7 +1,7 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Nuevo Registro de Rude";
+$titulo="Modificar Registro de Rude";
 $id=$_GET['id'];
 include_once '../../class/alumno.php';
 $alumno=new alumno;
@@ -17,7 +17,7 @@ $curso=new curso;
 $cur=todolista($curso->mostrarTodo(),"codcurso","nombre","");
 
 $foto="../foto/".$al['foto'];
-if(!file_exists($foto) or $foto!=""){
+if(!file_exists($foto) && $foto!=""){
 	$foto="../foto/0.jpg";
 }
 include_once '../../funciones/funciones.php';
@@ -127,7 +127,7 @@ include_once '../../cabecerahtml.php';
                     <tr><td colspan="2"><strong>Instruccion del Padre</strong></td></tr>
                     <tr>
                     	<td><?php campos("Mayor Grado de Instrucción - TUTOR","instruccionp","select",array("NINGUNA"=>"NINGUNA","PRIMARIA"=>"PRIMARIA","SECUNDARIA"=>"SECUNDARIA","TECNICO MEDIO"=>"TECNICO MEDIO","TECNICO SUPERIOR"=>"TECNICO SUPERIOR","NORMALISTA"=>"NORMALISTA","LICENCIATURA"=>"LICENCIATURA","CARRERA MILITAR"=>"CARRERA MILITAR","POSTGRADO"=>"POSTGRADO","BACHILLER"=>"BACHILLER","UNIVERSITARIO"=>"UNIVERSITARIO","NO SABE/NO RESPONDE"=>"NO SABE/NO RESPONDE"),0,"",$a['instruccionp']);?></td>
-                        <td><?php campos("Grado de Parentesco","parentescop","select",array("---"=>"---","PADRE"=>"PADRE","ABUELO"=>"ABUELO","ABUELA"=>"ABUELA","TIO"=>"TIO","TIA"=>"TIA","HERMANO"=>"HERMANO","TUTOR"=>"TUTOR"),$al['n']);?></td>
+                        <td><?php campos("Grado de Parentesco","parentescop","select",array("---"=>"---","PADRE"=>"PADRE","ABUELO"=>"ABUELO","ABUELA"=>"ABUELA","TIO"=>"TIO","TIA"=>"TIA","HERMANO"=>"HERMANO","TUTOR"=>"TUTOR"),0,"",$a['parentescop']);?></td>
                     </tr>
                     <tr>
                     	<td colspan="2"><?php campos("Idioma del TUTOR","idiomap","text",$a['idiomap'],0,array(),$al['n']);?></td>

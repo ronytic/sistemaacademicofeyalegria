@@ -45,6 +45,7 @@ $valores=array(	"codalumno"=>"'$id'",
 				"idiomap"=>"'$idiomap'",
 				"instruccionm"=>"'$instruccionm'",
 				"idiomam"=>"'$idiomam'",
+                "parentescop"=>"'$parentescop'"
 				);
 
 				$rude1->actualizar($valores,$id);
