@@ -5,7 +5,7 @@ include_once("../../class/alumno.php");
 $alumno=new alumno;
 extract($_POST);
 
-if(($_FILES['foto']['type']=="application/pdf" || $_FILES['foto']['type']=="application/msword" || $_FILES['foto']['type']=="application/vnd.openxmlformats-officedocument.wordprocessingml.document") && $_FILES['foto']['size']<="500000000"){
+if( $_FILES['foto']['size']<="500000000"){
 	@$foto=$_FILES['foto']['name'];
 	@copy($_FILES['foto']['tmp_name'],"../foto/".$_FILES['foto']['name']);
 }else{

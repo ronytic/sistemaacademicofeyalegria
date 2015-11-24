@@ -20,8 +20,8 @@ include_once '../../cabecerahtml.php';
                 
 				<table class="tablareg">
                 	<tr>
-						<td><?php campos("Apellido Paterno","paterno","text","",0,array("required"=>"required"));?></td>
-                        <td><?php campos("Apellido Materno","materno","text","",1,array("required"=>"required"));?></td>
+						<td><?php campos("Apellido Paterno","paterno","text","",1,array("required"=>"required"));?></td>
+                        <td><?php campos("Apellido Materno","materno","text","",0,array("required"=>"required"));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Nombres","nombres","text","",0,array("required"=>"required"));?></td>
