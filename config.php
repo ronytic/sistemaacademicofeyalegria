@@ -1,7 +1,7 @@
 <?php
 $title="Sistema Académico";
 $siglas="";
-$directory="sistemaacademico";//ej:carp/ sin el "/"
+$directory="sistemaacademicofeyalegria";//ej:carp/ sin el "/"
 $url="http://localhost/";//ej:http:"localhost/"
 $lema2="";
 $lema='Sistema Académico';
