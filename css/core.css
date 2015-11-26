@@ -233,7 +233,7 @@ background: -webkit-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
 background: -o-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
 background: -ms-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
 background: linear-gradient(top, #fefefe 0%, #eee9f0 100%);
-border-bottom: 2px solid #6fa559;
+border-bottom: 2px solid #c4151c;
 width: auto;
 }
 .cuerpo{
@@ -293,7 +293,7 @@ width: auto;
 }
 input[type=text],input.texto,textarea,select,option,input[type=password],input[type=date],input[type=search],input[type=number]{
 	border:#F0F0F0 1px solid;
-	border-bottom:#6fa559 1px solid;
+	border-bottom:#c4151c 1px solid;
 	padding:8px;
 	margin:3px !important;
 	
@@ -303,17 +303,17 @@ input[type=text]:focus,input[type=number]:focus,input.texto:focus,textarea:focus
 	border-right:#4783c4 1px solid;
 	-webkit-box-shadow:0px 0px 5px #4783c4;*/
 	outline:none;
-	border-bottom:#6fa559 1px dashed;
+	border-bottom:#c4151c 1px dashed;
 }
 input[type=submit].enviar,input[type=submit]{
 	margin-top:23px;
 
-	border: 1px solid #6fa559;
+	border: 1px solid #c4151c;
 	color:#FFF;
 	cursor:pointer;
 
 	padding:7px 10px 7px 10px;
-	background-color:#6fa559
+	background-color:#c4151c
 }
 .botonplomo{
 	padding:3px 10px 3px 10px;
@@ -330,7 +330,7 @@ border-radius:3px;
 }
 input[type=submit].enviar:hover,input[type=submit]:hover{
 
-background-color:#7ebc64
+background-color:#c9343a
 }
 input[readonly]{
 	background-color:#EFEFEF;
@@ -338,7 +338,7 @@ input[readonly]{
 	cursor:no-drop	
 }
 h3{
-	color: #6fa559;
+	color: #c4151c;
 	font-size: 20px;
 	margin: 0;
 	padding: 0 0 15px 0;	
@@ -564,7 +564,7 @@ table.tablalistado tr.cabecera td{
 	padding: 5px;
 	color: #FFF;
 	font-weight: bold;
-	background-color: #6fa559;	
+	background-color: #b6131d;	
 }
 table.tablalistado tr.contenido td{
 	padding:5px;
