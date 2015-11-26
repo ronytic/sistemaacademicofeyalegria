@@ -21,7 +21,7 @@ include_once("../funciones/funciones.php");
     	<div class="prefix_4 grid_4">
         <div id="formLogin" class="corner-all">
         <div class="cuerpo">
-   			<img src="../imagenes/logos/Escudo_de_Bolivia.gif" width="250" />
+   			<img src="../imagenes/logos/logo.jpg" width="250" />
 			</div>
         	<div class="titulo">Panel de Acceso</div>
             <div class="cuerpo">
