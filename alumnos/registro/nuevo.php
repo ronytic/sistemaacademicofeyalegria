@@ -59,7 +59,7 @@ include_once '../../cabecerahtml.php';
 				</table>
 			</fieldset>
 		</div>
-        <div class="prefix_0 grid_5">
+        <div class="grid_5 ">
 			<fieldset>
 				<div class="titulo">Datos de Padre de Familia</div>
                 <table class="tablareg">
@@ -69,7 +69,7 @@ include_once '../../cabecerahtml.php';
                     </tr>
                     <tr>
                     	<td><?php campos("C.I. Padre","cipadre","text","");?></td>
-                        <td><?php campos("Ocupación Padre","ocupacionpadre","text","");?></td>
+                        
                     </tr>
                     <tr>
                     	<td><?php campos("Apellidos Madre","apellidosmadre","text","");?></td>
@@ -77,11 +77,24 @@ include_once '../../cabecerahtml.php';
                     </tr>
                     <tr>
                     	<td><?php campos("C.I. Madre","cimadre","text","");?></td>
-                        <td><?php campos("Ocupación Madre","ocupacionmadre","text","");?></td>
+                        
                     </tr>
-                    <tr><td colspan="2"><?php campos("Guardar","guardar","submit");?></td></tr>
+                    
                 </table>
         	</fieldset>
+            <fieldset>
+            <div class="titulo">Datos de Padre de Familia</div>
+                 <table class="tablareg">
+                	<tr>
+                    	<td><?php campos("Fotocopia de CI","fotocopiaci","checkbox","");?></td>
+                        <td><?php campos("Fotocopia Cert.Nac.","fotocopianacimiento","checkbox","");?></td>
+                        <td><?php campos("Formulario Rude","formulariorude","checkbox","");?></td>
+                        <td><?php campos("Fotocopia CI Padre/Tutor","fotocopiapadre","checkbox","");?></td>
+                        <td><?php campos("Compromiso","compromiso","checkbox","");?></td>
+                    </tr>
+                    <tr><td colspan="5"><?php campos("Guardar","guardar","submit");?></td></tr>
+                </table>
+            </fieldset>
 		</div>     
         </form>
     	<div class="clear"></div>
