@@ -21,12 +21,7 @@ include_once '../../cabecerahtml.php';
 ?>
 <script language="javascript">
 $(document).ready(function(e) {
-    $("#acuenta,#saldo,#total").change(function(e) {
-        var acuenta=$("#acuenta").val();
-		var saldo=$("#saldo").val();
-		var total=$("#total").val();
-		$("#saldo").val(total-acuenta);
-    });
+    
 });
 </script>
 <?php include_once '../../cabecera.php';?>
