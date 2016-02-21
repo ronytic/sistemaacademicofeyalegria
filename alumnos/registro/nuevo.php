@@ -53,7 +53,7 @@ include_once '../../cabecerahtml.php';
 						<td colspan="2"><?php campos("Observación","observacion","textarea");?></td>
 					</tr>
                     <tr>
-						<td colspan="2"><?php campos("Foto","foto","file","",0,array("required"=>"required"));?></td>
+						<td colspan="2"><?php campos("Foto","foto","file","",0,array(""=>""));?></td>
 					</tr>
 					
 				</table>

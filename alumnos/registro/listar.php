@@ -7,7 +7,6 @@ include_once("../../class/curso.php");
 $curso=new curso;
 $cur=todolista($curso->mostrarTodo(),"codcurso","nombre","");
 
-$dest=array("Procesado"=>"Procesado","Directo"=>"Directo");
 include_once("../../funciones/funciones.php");
 include_once "../../cabecerahtml.php";
 ?>
@@ -26,7 +25,7 @@ include_once "../../cabecerahtml.php";
                     </tr>
                     <tr>
                         <td width="250" colspan="2"><?php campos("Curso","codcurso","select",$cur);?></td>
-                        <td><?php campos("Sexo","sexo","select",array("0"=>"Femenino","1"=>"Masculino"),0,"","");?></td>
+                        <td><?php campos("Sexo","sexo","select",array("0"=>"Femenino","1"=>"Masculino","%"=>"Todos"),0,"","%");?></td>
                         <td><?php campos("Buscar","enviar","submit","",0,array("size"=>15));?></td>
                     </tr>
                 </table>

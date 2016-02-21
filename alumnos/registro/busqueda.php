@@ -6,7 +6,7 @@ if (!empty($_POST)) {
 	include_once '../../class/curso.php';
 	extract($_POST);
 	$codcurso=$codcurso?"codcurso='$codcurso'":"codcurso LIKE '%'";
-	$sexo=$sexo!=""?"sexo='$sexo'":"sexo LIKE '%'";
+	$sexo=$sexo!=""?"sexo LIKE '$sexo'":"sexo LIKE '%'";
 	$alumno=new alumno;
 	$curso=new curso;
 	$al=$alumno->mostrarTodo("paterno LIKE '%$paterno%' and materno LIKE '%$materno%' and nombres LIKE '%$nombres%' and $sexo and $codcurso","paterno,materno,nombres,codcurso");
