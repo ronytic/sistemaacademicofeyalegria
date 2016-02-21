@@ -86,11 +86,11 @@ include_once '../../cabecerahtml.php';
             <div class="titulo">Datos de Padre de Familia</div>
                  <table class="tablareg">
                 	<tr>
-                    	<td><?php campos("Fotocopia de CI","fotocopiaci","checkbox","");?></td>
-                        <td><?php campos("Fotocopia Cert.Nac.","fotocopianacimiento","checkbox","");?></td>
-                        <td><?php campos("Formulario Rude","formulariorude","checkbox","");?></td>
-                        <td><?php campos("Fotocopia CI Padre/Tutor","fotocopiapadre","checkbox","");?></td>
-                        <td><?php campos("Compromiso","compromiso","checkbox","");?></td>
+                    	<td><?php campos("Fotocopia de CI","fotocopiaci","checkbox","1");?></td>
+                        <td><?php campos("Fotocopia Cert.Nac.","fotocopianacimiento","checkbox","1");?></td>
+                        <td><?php campos("Formulario Rude","formulariorude","checkbox","1");?></td>
+                        <td><?php campos("Fotocopia CI Padre/Tutor","fotocopiapadre","checkbox","1");?></td>
+                        <td><?php campos("Compromiso","compromiso","checkbox","1");?></td>
                     </tr>
                     <tr><td colspan="5"><?php campos("Guardar","guardar","submit");?></td></tr>
                 </table>
