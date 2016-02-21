@@ -85,7 +85,7 @@ include_once '../../cabecerahtml.php';
                     </tr>
                     <tr>
                     	<td><?php campos("C.I. Padre","cipadre","text",$al['cipadre']);?></td>
-                        <td><?php campos("Ocupación Padre","ocupacionpadre","text",$al['ocupacionpadre']);?></td>
+                        
                     </tr>
                     <tr>
                     	<td><?php campos("Apellidos Madre","apellidosmadre","text",$al['apellidosmadre']);?></td>
@@ -93,11 +93,24 @@ include_once '../../cabecerahtml.php';
                     </tr>
                     <tr>
                     	<td><?php campos("C.I. Madre","cimadre","text",$al['cimadre']);?></td>
-                        <td><?php campos("Ocupación Madre","ocupacionmadre","text",$al['ocupacionmadre']);?></td>
+                        
                     </tr>
                     <tr><td colspan="2"><?php campos("Guardar","guardar","submit");?></td></tr>
                 </table>
         	</fieldset>
+            <fieldset>
+            <div class="titulo">Datos de Padre de Familia</div>
+                 <table class="tablareg">
+                	<tr>
+                    	<td><?php campos("Fotocopia de CI","fotocopiaci","checkbox","",0,$al['fotocopiaci']?array("checked"=>"checked"):"");?></td>
+                        <td><?php campos("Fotocopia Cert.Nac.","fotocopianacimiento","checkbox","",0,$al['fotocopianacimiento']?array("checked"=>"checked"):"");?></td>
+                        <td><?php campos("Formulario Rude","formulariorude","checkbox","",0,$al['formulariorude']?array("checked"=>"checked"):"");?></td>
+                        <td><?php campos("Fotocopia CI Padre/Tutor","fotocopiapadre","checkbox","",0,$al['fotocopiapadre']?array("checked"=>"checked"):"");?></td>
+                        <td><?php campos("Compromiso","compromiso","checkbox","",0,$al['compromiso']?array("checked"=>"checked"):"");?></td>
+                    </tr>
+                    <tr><td colspan="5"><?php campos("Guardar","guardar","submit");?></td></tr>
+                </table>
+            </fieldset>
 		</div>     
         </form>
     	<div class="clear"></div>

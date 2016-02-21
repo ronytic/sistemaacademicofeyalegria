@@ -33,12 +33,16 @@ $valores=array(	"materno"=>"'$materno'",
 				"apellidospadre"=>"'$apellidospadre'",
 				"nombrespadre"=>"'$nombrespadre'",
 				"cipadre"=>"'$cipadre'",
-				"ocupacionpadre"=>"'$ocupacionpadre'",
+				
 				"apellidosmadre"=>"'$apellidosmadre'",
 				"nombresmadre"=>"'$nombresmadre'",
 				"cimadre"=>"'$cimadre'",
-				"ocupacionmadre"=>"'$ocupacionmadre'",
 				
+				"fotocopiaci"=>"'$fotocopiaci'",
+				"fotocopianacimiento"=>"'$fotocopianacimiento'",
+                "formulariorude"=>"'$formulariorude'",
+                "fotocopiapadre"=>"'$fotocopiapadre'",
+                "compromiso"=>"'$compromiso'",
 				);
 if($foto!=""){				
 	$valores=array_merge($valores,array("foto"=>"'$foto'"));
