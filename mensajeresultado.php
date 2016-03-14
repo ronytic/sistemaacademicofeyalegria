@@ -30,7 +30,7 @@ if($archivolistar=="" && empty($archivolistar)){
 				}?>
                 <hr />
                 <?php if($nuevo==0){?>
-                <a href="<?php echo $archivonuevo;?>" class="botoncorrecto" >Nuevo Registro</a>
+                <a href="<?php echo $archivonuevo;?>" class="botoncorrecto" ><?php echo $textonuevo!=""?$textonuevo:'Nuevo Registro'?></a>
                 <?php }?>
                 <?php if($codinsercion!=""){?>
                 <a href="<?php echo $archivovolver;?>?id=<?php echo $codinsercion;?>" class="botoninfo" >Modificar Registro Insertado</a>
