@@ -32,14 +32,17 @@ if (!empty($_POST)) {
 		$d[$i]['rude']=$a['rude'];
 		$d[$i]['telefonocasa']=$a['telefonocasa'];
 		$d[$i]['celular']=$a['celular'];
-		$n=array_shift($notas->mostrarTodo("coddocentemateriacurso=".$coddocentemateriacurso." and trimestre=".$trimestre." and codalumno=".$a['codalumno']));
+        $n=array_shift($notas->mostrarTodo("coddocentemateriacurso=".$coddocentemateriacurso." and codalumno=".$a['codalumno']));
 		
-		$d[$i]['nota']='<input type="hidden" name="n['.$i.'][codnotas]" value="'.$n['codnotas'].'">
-		<input type="number" name="n['.$i.'][nota]" value="'.$n['nota'].'" required max="70" min="0" style="width:35px;">';
-		$d[$i]['dps']='<input type="number" name="n['.$i.'][dps]" value="'.$n['dps'].'" required max="10" min="0" style="width:35px;">';
-		$d[$i]['notafinal']='<input type="number" name="n['.$i.'][notafinal]" value="'.$n['notafinal'].'" required max="70" min="0" style="width:35px;">';
+		$d[$i]['bimestre1']='<input type="hidden" name="n['.$i.'][codnotas]" value="'.$n['codnotas'].'"><input type="number" name="n['.$i.'][bimestre1]" value="'.$n['bimestre1'].'" required max="100" min="0" style="width:35px;"  class="der notas n'.$n['codnotas'].'" rel="'.$n['codnotas'].'" '.($bimestre!=1?'readonly':'').'>';
+        $d[$i]['bimestre2']='<input type="number" name="n['.$i.'][bimestre2]" value="'.$n['bimestre2'].'" required max="100" min="0" style="width:35px;"  class="der notas n'.$n['codnotas'].'" rel="'.$n['codnotas'].'" '.($bimestre!=2?'readonly':'').'>';
+        $d[$i]['bimestre3']='<input type="number" name="n['.$i.'][bimestre3]" value="'.$n['bimestre3'].'" required max="100" min="0" style="width:35px;"  class="der notas n'.$n['codnotas'].'" rel="'.$n['codnotas'].'" '.($bimestre!=3?'readonly':'').'>';
+        $d[$i]['bimestre4']='<input type="number" name="n['.$i.'][bimestre4]" value="'.$n['bimestre4'].'" required max="100" min="0" style="width:35px;"  class="der notas n'.$n['codnotas'].'" rel="'.$n['codnotas'].'" '.($bimestre!=4?'readonly':'').'>';
+        
+        
+		$d[$i]['notafinal']='<input type="number" name="n['.$i.'][notafinal]" value="'.$n['notafinal'].'" required max="100" min="0" style="width:35px;" readonly class="der total t'.$n['codnotas'].' '.($n['notafinal']<51?'rojo':'').'">';
 	}
-	$titulo=array("paterno"=>"Paterno","materno"=>"Materno","nombres"=>"Nombres","nota"=>"Nota","dps"=>"Dps","notafinal"=>"Nota Final");
+	$titulo=array("paterno"=>"Paterno","materno"=>"Materno","nombres"=>"Nombres","bimestre1"=>"1º Bimestre","bimestre2"=>"2º Bimestre","bimestre3"=>"3º Bimestre","bimestre4"=>"4º Bimestre","notafinal"=>"Nota Final");
 	?>
     <form action="actualizar.php" method="post">
     

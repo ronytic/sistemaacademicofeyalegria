@@ -4,10 +4,15 @@ if(!empty($_POST)):
 include_once("../../class/notas.php");
 $notas=new notas;
 extract($_POST);
-
+/*echo "<pre>";
+print_r($n);
+echo "</pre>";*/
+    
 foreach($n as $no){
-	$valores=array(	"nota"=>"'".$no['nota']."'",
-				"dps"=>"'".$no['dps']."'",
+	$valores=array(	"bimestre1"=>"'".$no['bimestre1']."'",
+				"bimestre2"=>"'".$no['bimestre2']."'",
+                "bimestre3"=>"'".$no['bimestre3']."'",
+                "bimestre4"=>"'".$no['bimestre4']."'",
 				"notafinal"=>"'".$no['notafinal']."'",
 				);	
 	/*echo "<pre>";
