@@ -28,5 +28,9 @@ $mensaje[]="SUS NOTAS SE GUARDARON CORRECTAMENTE";
 $nuevo=1;
 $titulo="Mensaje de Respuesta";
 $folder="../../";
-include_once '../../mensajeresultado.php';
+//include_once '../../mensajeresultado.php';
+
 endif;?>
+<script>
+history.back();
+</script>
