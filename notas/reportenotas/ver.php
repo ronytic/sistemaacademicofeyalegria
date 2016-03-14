@@ -1,7 +1,7 @@
 <?php
 include_once("../../impresion/pdf.php");
 $titulo="Reporte de Notas";
-$trimestre=$_GET['trimestre'];
+$bimestre=$_GET['bimestre'];
 $codcurso=$_GET['codcurso'];
 
 include_once("../../class/alumno.php");
@@ -22,10 +22,10 @@ $notas=new notas;
 
 class PDF extends PPDF{
 	function Cabecera(){
-		global $trimestre,$cur,$docentemateriacurso,$materia,$codcurso;
+		global $bimestre,$cur,$docentemateriacurso,$materia,$codcurso;
 		$this->Ln();
 		$this->CuadroCabecera(25,"Curso:",50,capitalizar($cur['nombre']),0);
-		$this->CuadroCabecera(25,"Trimestre:",50,capitalizar($trimestre),0);
+	    $this->CuadroCabecera(25,"Bimestre:",50,capitalizar($bimestre),0);
 		$this->Ln();
 		$this->Ln();
 		$this->TituloCabecera(10,"N");
@@ -38,7 +38,7 @@ class PDF extends PPDF{
 			//$this->TituloCabecera(10,"DPS".$j);
 			$this->TituloCabecera(10,$mat['abreviado']);
 		}
-	}	
+	}	 
 }
 
 $pdf=new PDF("L","mm","letter");
@@ -53,14 +53,14 @@ foreach($alumno->mostrarTodo("codcurso=".$codcurso,"paterno,materno,nombres") as
 		$mat=array_shift($materia->mostrar($dmc['codmateria']));
 		
 		//$pdf->CuadroCuerpo(15,$mat['nombre'],"","",1);
-		$n=array_shift($notas->mostrarTodo("coddocentemateriacurso=".$dmc['coddocentemateriacurso']." and trimestre=".$trimestre." and codalumno=".$al['codalumno']));
+		$n=array_shift($notas->mostrarTodo("coddocentemateriacurso=".$dmc['coddocentemateriacurso']." and codalumno=".$al['codalumno']));
 			//$pdf->CuadroCuerpo(10,$n['nota'],"","R",1);
 			//$pdf->CuadroCuerpo(10,$n['dps'],"","R",1);
-			$pdf->CuadroCuerpo(10,$n['notafinal'],"","R",1);
+			$pdf->CuadroCuerpo(10,$n['bimestre'.$bimestre],"","R",1);
 		
 	}
 	$pdf->Ln();
 }
 
-$pdf->Output();
+$pdf->Output("Reporte de Notas.pdf","I");
 ?>

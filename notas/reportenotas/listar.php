@@ -21,7 +21,7 @@ include_once "../../cabecerahtml.php";
                 <table class="tablabus">
                     <tr>
                         <td width="250" colspan="2"><?php campos("Curso","codcurso","select",$cur);?></td>
-                        <td><?php campos("Trimestre","trimestre","select",array("1"=>"1","2"=>"2","3"=>"3","3"=>"3"));?></td>
+                        <td><?php campos("Bimestre","bimestre","select",array("1"=>"1","2"=>"2","3"=>"3","3"=>"3","4"=>"4"));?></td>
                         <td><?php campos("Buscar","enviar","submit","",0,array("size"=>15));?></td>
                     </tr>
                 </table>
