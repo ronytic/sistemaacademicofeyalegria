@@ -636,3 +636,9 @@ small{
 	font-size:11px;
 }
 /*Fin de Texto*/
+.rojo{
+    background-color:rgba(237,79,82,1.00) !important;    
+}
+.verde{
+    background-color:rgba(62,159,106,1.00) !important;    
+}
