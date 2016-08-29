@@ -12,13 +12,19 @@ $garantia=array(1=>"Si",0=>"No");
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
 ?>
-<script language="javascript">
-$(document).ready(function(e) {
-    $("#acuenta,#saldo,#total").change(function(e) {
-        var acuenta=$("#acuenta").val();
-		var saldo=$("#saldo").val();
-		var total=$("#total").val();
-		$("#saldo").val(total-acuenta);
+<script type="text/javascript" language="javascript">
+$(document).on("ready",function(){
+    $("#nombre").keyup(function(e) {
+        var valor=$(this).val();
+        var dato="";
+        dato+=valor[0];
+        for(i=1;i<=valor.length;i++){
+            if(valor[i]==" "){
+                if(typeof(valor[i+1])!=="undefined")
+                dato+=valor[i+1];    
+            }    
+        }
+        $("#abreviado").val(dato.toUpperCase())
     });
 });
 </script>

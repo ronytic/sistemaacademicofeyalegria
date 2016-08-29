@@ -8,6 +8,22 @@ $garantia=array(1=>"Si",0=>"No");
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
 ?>
+<script type="text/javascript" language="javascript">
+$(document).on("ready",function(){
+    $("#nombre").keyup(function(e) {
+        var valor=$(this).val();
+        var dato="";
+        dato+=valor[0];
+        for(i=1;i<=valor.length;i++){
+            if(valor[i]==" "){
+                if(typeof(valor[i+1])!=="undefined")
+                dato+=valor[i+1];    
+            }    
+        }
+        $("#abreviado").val(dato.toUpperCase())
+    });
+});
+</script>
 <?php include_once '../../cabecera.php';?>
 <div class="grid_12">
 	<div class="contenido imagenfondo">
