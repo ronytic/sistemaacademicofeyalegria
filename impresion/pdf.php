@@ -63,6 +63,7 @@ php_start(0);
 		}
 		function CuadroCuerpo($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tam=9){
 			$this->Fuente("",$tam);
+                $this->SetFillColor(190,190,190);
 			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
 		}
 		function CuadroCuerpoMulti($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tam=9){
