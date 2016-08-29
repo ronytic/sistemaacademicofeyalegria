@@ -13,6 +13,15 @@ $codcurso=$_POST['codcurso'];
 //echo "<pre>";print_r($_POST);echo "</pre>";
 //$notas->vaciar();
 $docmatcur=$docentemateriacurso->mostrarTodo("codcurso=".$codcurso);
+/*echo count($docmatcur);
+$docmatc=array();
+foreach($docmatcur as $dmc){
+    array_push($docmatc,$dmc['coddocentemateriacurso']);
+}
+//print_r($docmatc);
+$where=implode(",",$docmatc);
+$notas->updateRow(array("activo"=>0),"coddocentemateriacurso IN($where)");
+exit();*/
 foreach($docmatcur as $dmc){
     $notas->updateRow(array("activo"=>0),"coddocentemateriacurso=".$dmc['coddocentemateriacurso']);
 	foreach($alumno->mostrarTodo("codcurso=".$dmc['codcurso']) as $al){

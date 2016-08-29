@@ -26,7 +26,7 @@ include_once "../../cabecerahtml.php";
                     </tr>
                     <tr>
                         <td width="250" colspan="2"><?php campos("Curso","codcurso","select",$cur);?></td>
-                        <td><?php campos("Sexo","sexo","select",array("0"=>"Femenino","1"=>"Masculino"));?></td>
+                        <td><?php campos("Sexo","sexo","select",array("0"=>"Femenino","1"=>"Masculino","%"=>"Todos"),0,"","%");?></td>
                         <td><?php campos("Buscar","enviar","submit","",0,array("size"=>15));?></td>
                     </tr>
                 </table>

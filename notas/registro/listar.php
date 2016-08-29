@@ -3,7 +3,6 @@ include_once("../../login/check.php");
 $titulo="Registro de Notas";
 $folder="../../";
 
-
 $idusuario=$_SESSION['idusuario'];
 include_once("../../class/docentemateriacurso.php");
 $docentemateriacurso=new docentemateriacurso;
@@ -14,9 +13,10 @@ $curso=new curso;
 foreach($docentemateriacurso->mostrarTodo("coddocente=".$idusuario) as $dmc){
 	$cur=array_shift($curso->mostrar($dmc['codcurso']));
 	$mate=array_shift($materia->mostrar($dmc['codmateria']));
-	$mat['coddocentemateriacurso']=$mate['nombre']." - ".$cur['nombre'];
+	$mat[$dmc['coddocentemateriacurso']]=$mate['nombre']." - ".$cur['nombre'];
 }
 
+//print_r($mat);
 include_once("../../funciones/funciones.php");
 include_once "../../cabecerahtml.php";
 ?>

@@ -7,11 +7,11 @@ if (!empty($_POST)) {
 	include_once '../../class/rude.php';
 	extract($_POST);
 	$codcurso=$codcurso?"codcurso='$codcurso'":"codcurso LIKE '%'";
-	$sexo=$sexo!=""?"sexo='$sexo'":"sexo LIKE '%'";
+	
 	$alumno=new alumno;
 	$curso=new curso;
 	$rude=new rude;
-	$al=$alumno->mostrarTodo("paterno LIKE '%$paterno%' and materno LIKE '%$materno%' and nombres LIKE '%$nombres%' and $sexo and $codcurso","paterno,materno,nombres,codcurso");
+	$al=$alumno->mostrarTodo("paterno LIKE '%$paterno%' and materno LIKE '%$materno%' and nombres LIKE '%$nombres%' and sexo LIKE '$sexo' and $codcurso","paterno,materno,nombres,codcurso");
 	$i=0;
 	foreach($al as $a){$i++;
 		$cur=array_shift($curso->mostrar($a['codcurso']));

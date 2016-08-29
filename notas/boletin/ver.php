@@ -31,10 +31,9 @@ class PDF extends PPDF{
 		$this->TituloCabecera(10,"N");
 		$this->TituloCabecera(50,"Materia");
 		for($j=1;$j<=4;$j++){
-			$this->TituloCabecera(10,"Nota".$j);
-			$this->TituloCabecera(10,"DPS".$j);
-			$this->TituloCabecera(10,"NF".$j);
-		}
+			$this->TituloCabecera(25,$j."º Bimestre");
+    	}
+        $this->TituloCabecera(20,"Nota Final");
 	}	
 }
 
@@ -45,12 +44,12 @@ foreach($docentemateriacurso->mostrarTodo("codcurso=".$a['codcurso']) as $dmc){$
 	$mat=array_shift($materia->mostrar($dmc['codmateria']));
 	$pdf->CuadroCuerpo(10,$i,"","R",1);
 	$pdf->CuadroCuerpo(50,$mat['nombre'],"","",1);
-	for($j=1;$j<=4;$j++){
-		$n=array_shift($notas->mostrarTodo("coddocentemateriacurso=".$dmc['coddocentemateriacurso']." and trimestre=".$j." and codalumno=".$id));
-		$pdf->CuadroCuerpo(10,$n['nota'],"","R",1);
-		$pdf->CuadroCuerpo(10,$n['dps'],"","R",1);
-		$pdf->CuadroCuerpo(10,$n['notafinal'],"","R",1);
-	}
+	    $n=array_shift($notas->mostrarTodo("coddocentemateriacurso=".$dmc['coddocentemateriacurso']."  and codalumno=".$id));
+	$pdf->CuadroCuerpo(25,$n['bimestre1'],"","C",1);
+    $pdf->CuadroCuerpo(25,$n['bimestre2'],"","C",1);
+    $pdf->CuadroCuerpo(25,$n['bimestre3'],"","C",1);
+    $pdf->CuadroCuerpo(25,$n['bimestre4'],"","C",1);
+	$pdf->CuadroCuerpo(20,$n['notafinal'],($n['notafinal']<51?1:0),"C",1);
 	$pdf->Ln();
 }
 
