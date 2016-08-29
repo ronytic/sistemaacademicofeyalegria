@@ -10,7 +10,7 @@ if( $_FILES['foto']['size']<="500000000"){
 	@copy($_FILES['foto']['tmp_name'],"../foto/".$_FILES['foto']['name']);
 }else{
 	//mensaje que no es valido el tipo de archivo	
-	$mensaje[]="Archivo no válido del curriculum. Verifique e intente nuevamente";
+	$mensaje[]="Archivo no válido. Verifique e intente nuevamente";
 }
 //empieza la copia de archivos
 $valores=array(	"materno"=>"'$materno'",
@@ -47,9 +47,15 @@ $valores=array(	"materno"=>"'$materno'",
 if($foto!=""){				
 	$valores=array_merge($valores,array("foto"=>"'$foto'"));
 }
-				$alumno->actualizar($valores,$id);
-				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
-
+        $al=$alumno->mostrarTodo("ci='".$ci."'");
+        if(count($al)>=1){
+				    
+            $mensaje[]="YA SE ENCUENTRA REGISTRADO UN ALUMNO CON EL MISMO NÚMERO DE CARNET";
+        }else{
+                    
+            $alumno->actualizar($valores,$id);
+            $mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
+        }
 
 $titulo="Mensaje de Respuesta";
 $folder="../../";
